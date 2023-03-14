@@ -4,8 +4,7 @@ import re
 from pathlib import Path
 from typing import List
 
-from src.billtypes import DASN
-from src.billtypes import DAES
+from src.billtypes import DAES, DASN
 
 
 def main() -> None:
