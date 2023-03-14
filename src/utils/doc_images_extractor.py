@@ -1,25 +1,24 @@
 import fitz
 
-filename: str = "pdfs/daes1.pdf"
+filename: str = "pdfs/dasn2.pdf"
 
 with fitz.open(filename) as pdf:
 
-	imagens = pdf.get_page_images(0)
+	images = pdf.get_page_images(0)
 
-	for imagem in imagens:
+	for image in images:
 
-		xref = imagem[0]
-		smask = imagem[1]
+		width = image[2]
+		height = image[3]
 
-		width = imagem[2]
-		height = imagem[3]
+		if width == 350 and height == 350:
+			xref = image[0]
 
-		print(xref, smask, width, height)
+	picture = fitz.Pixmap(pdf, xref)
+	picture = fitz.Pixmap(fitz.csRGB, picture)
 
-		pix = fitz.Pixmap(pdf, xref)
+	image_data = picture.tobytes()
 
-		imgdata = pix.tobytes("png")
+	with open(f"{xref}_image.png", "wb") as image_file:
 
-		with open(f"{xref}_image.png", "wb") as img_file:
-
-			img_file.write(imgdata)
+			image_file.write(image_data)
