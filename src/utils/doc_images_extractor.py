@@ -1,24 +1,34 @@
-import fitz
+import cv2
+import numpy
 
-filename: str = "pdfs/dasn2.pdf"
+from typing import List
 
-with fitz.open(filename) as pdf:
+from cv2 import imread, imdecode, QRCodeDetector, IMREAD_COLOR
+from fitz import Document, Pixmap, csRGB, open as doc_open
+from numpy import frombuffer, uint8
 
-	images = pdf.get_page_images(0)
+from util import check_or_create_path
+
+filename: str = "pdfs/daes1.pdf"
+
+with doc_open(filename) as pdf:
+
+	images: List = pdf.get_page_images(0)
 
 	for image in images:
 
-		width = image[2]
-		height = image[3]
+		width: int = image[2]
+		height: int = image[3]
 
 		if width == 350 and height == 350:
-			xref = image[0]
+			xref: int = image[0]
 
-	picture = fitz.Pixmap(pdf, xref)
-	picture = fitz.Pixmap(fitz.csRGB, picture)
+	picture: Pixmap = Pixmap(pdf, xref)
+	picture: Pixmap = Pixmap(csRGB, picture)
 
-	image_data = picture.tobytes()
+image_raw_data: bytes = picture.tobytes()
+image_data = imdecode(numpy.frombuffer(image_raw_data, numpy.uint8), IMREAD_COLOR)
 
-	with open(f"{xref}_image.png", "wb") as image_file:
+data: str = QRCodeDetector().detectAndDecode(image_data)[0]
 
-			image_file.write(image_data)
+print(data)

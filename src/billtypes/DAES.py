@@ -16,7 +16,8 @@ class DAES:
 		self.cpf: str = data[2]
 		self.value: float = parse_value(data[14])
 		self.due_date: str = data[11]
-		self.bar_code: str = "".join(data[-20:-16:1]).replace(" ", "")
+		self.bar_code: str = "".join(data[57:61]).replace(" ", "")
+		self.pix_string: str = data[-1]
 		self.doc_type: str = "Documento de Arrecadação do eSocial"
 
 		composition: List[str] = data[data.index("Composição do Documento de Arrecadação") + 1:data.index("Totais"):1]

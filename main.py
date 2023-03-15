@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List
 
 from src.billtypes import DAES, DASN
+from src.utils.util import pix_qrcode_decoder
 
 
 def main() -> None:
@@ -24,6 +25,8 @@ def main() -> None:
 				plain_text: str = bill[0].get_text()
 
 				splitted_text: List[str] = plain_text.split("\n")
+				
+				splitted_text.append(pix_qrcode_decoder(bill))
 
 				DOC(splitted_text).to_json()
 
