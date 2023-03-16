@@ -14,7 +14,15 @@ class DASN:
 	def __init__(self, data: List[str]):
 		
 		self.cnpj: str = data[2]
-		self.value: float = parse_value(data[12])
+		j = 0
+		while (j < len(data)):
+			if (data[j] == "Valor Total do Documento"):
+				print("Encontrou")
+				self.value: float = parse_value(data[j+1])
+				break
+			j += 1
+			
+		#self.value: float = parse_value(data[12])
 		self.due_date: str = data[9]
 		self.bar_code: str = "".join(data[62:66]).replace(" ", "")
 		self.pix_string: str = data[-1]
@@ -29,6 +37,7 @@ class DASN:
 	def to_json(self):
 
 		filename: str = re.sub(r"[^\w\s]", "", f"dasn_{self.cnpj}_{self.due_date}")
+		print("JSON")
 		filepath: str = f"jsons/{filename}.json"
 
 		check_or_create_path("jsons")
