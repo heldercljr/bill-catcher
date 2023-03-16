@@ -5,11 +5,11 @@ from pathlib import Path
 from typing import List
 
 from src.billtypes import DAES, DASN
-from src.utils.util import pix_qrcode_decoder
+from src.utils.util import pix_qrcode_decoder, email_catcher
 
 
 def main() -> None:
-
+	email_catcher()
 	DOCUMENT_TYPES = ("DASN", "DAES")
 
 	for filepath in Path("pdfs").glob("*.pdf"):

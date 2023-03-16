@@ -18,15 +18,12 @@ class DASN:
 		while (j < len(data)):
 			if (data[j] == "Valor Total do Documento"):
 				self.value: float = parse_value(data[j+1])
-			#print(data[j])
 			if (data[j] == "Página:"):
-				print("encontrou")
 				self.bar_code: str = "".join(data[j+2:j+6]).replace(" ", "")
 			j += 1
 
 		#self.value: float = parse_value(data[12])
 		self.due_date: str = data[9]
-		#print(data)
 		#self.bar_code: str = "".join(data[62:66]).replace(" ", "")
 		self.pix_string: str = data[-1]
 		self.doc_type: str = "Documento de Arrecadação do Simples Nacional"
