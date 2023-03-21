@@ -1,0 +1,50 @@
+[
+  {
+    "cpfcnpj": "027.203.344-80",
+    "value": 358.04,
+    "due_date": "07/03/2023",
+    "bar_code": "858100000030580404322301660716230544921553149083",
+    "pix_string": "00020101021226850014br.gov.bcb.pix2563qrcodepix.bb.com.br/pix/v2/539231bb-655c-4c06-af9f-44197d9dd2d25204000053039865802BR5925SECRETARIA DA RECEITA FED6008BRASILIA62070503***63043781",
+    "doc_type": "Documento de Arrecada\u00e7\u00e3o do eSocial"
+  },
+  {
+    "cpfcnpj": "17.431.604/0001-95",
+    "value": 70.1,
+    "due_date": "20/04/2023",
+    "bar_code": "858600000004701003282310100708230756032480130637",
+    "pix_string": "00020101021226850014br.gov.bcb.pix2563qrcodepix.bb.com.br/pix/v2/611ffa4b-35e6-4892-b768-389599c1d4735204000053039865802BR5925SECRETARIA DA RECEITA FED6008BRASILIA62070503***6304A6C7",
+    "doc_type": "Documento de Arrecada\u00e7\u00e3o do Simples Nacional"
+  },
+  {
+    "cpfcnpj": "38.124.289/0001-23",
+    "value": 600.0,
+    "due_date": "20/03/2023",
+    "bar_code": "858000000062000003282309790720230608958434729760",
+    "pix_string": "00020101021226850014br.gov.bcb.pix2563qrcodepix.bb.com.br/pix/v2/1377d4a5-6cef-4a8a-8f14-b051a786a7135204000053039865802BR5925SECRETARIA DA RECEITA FED6008BRASILIA62070503***630494F7",
+    "doc_type": "Documento de Arrecada\u00e7\u00e3o do Simples Nacional"
+  },
+  {
+    "cpfcnpj": "38.124.289/0001-23",
+    "value": 600.0,
+    "due_date": "22/02/2023",
+    "bar_code": "858900000069000003282309530720230474079271365034",
+    "pix_string": "00020101021226850014br.gov.bcb.pix2563qrcodepix.bb.com.br/pix/v2/2c196ea1-9f77-41a6-bccc-b992bfc3a8a05204000053039865802BR5925SECRETARIA DA RECEITA FED6008BRASILIA62070503***6304DEDC",
+    "doc_type": "Documento de Arrecada\u00e7\u00e3o do Simples Nacional"
+  },
+  {
+    "cpfcnpj": "41.123.036/0001-40",
+    "value": 66.1,
+    "due_date": "20/03/2023",
+    "bar_code": "858600000004661003282309790708230750032326728684",
+    "pix_string": "00020101021226850014br.gov.bcb.pix2563qrcodepix.bb.com.br/pix/v2/2a024281-851b-44cf-a7bc-eb3eb3cca0185204000053039865802BR5925SECRETARIA DA RECEITA FED6008BRASILIA62070503***6304207B",
+    "doc_type": "Documento de Arrecada\u00e7\u00e3o do Simples Nacional"
+  },
+  {
+    "cpfcnpj": "45.485.465/0001-18",
+    "value": 66.1,
+    "due_date": "20/03/2023",
+    "bar_code": "858400000000661003282309790708230750971848981622",
+    "pix_string": "00020101021226850014br.gov.bcb.pix2563qrcodepix.bb.com.br/pix/v2/329dc6f6-3ad1-4ffe-9978-4be659dc82575204000053039865802BR5925SECRETARIA DA RECEITA FED6008BRASILIA62070503***630481EA",
+    "doc_type": "Documento de Arrecada\u00e7\u00e3o do Simples Nacional"
+  }
+]
